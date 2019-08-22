@@ -25,7 +25,7 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping(path="/allevents", method = RequestMethod.GET)
+    @RequestMapping(path="/allusers", method = RequestMethod.GET)
     public List<User> findAllUsers() {
         return userRepository.findAll();
     }
