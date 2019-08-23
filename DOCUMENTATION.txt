@@ -1,0 +1,12 @@
+=== Endpoint "addevent" (Content- Type : application/json in the raw from Postmant in the body passing this JSON data )
+{
+	"monthId" : "1909",
+	"eventDate":"20199820",
+	"beginTime": "21:12:00",
+	"endTime": "21:14:00",
+	"duration": "2",
+	"description": "Много малък пристъп, 24 градуса околна температура",
+	"medicineInDurationOfEvent" : "true",
+	"temperaturre" : "24"
+
+}
