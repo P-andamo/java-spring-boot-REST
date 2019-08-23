@@ -1,16 +1,11 @@
 package springboottestexample.springboottestexample.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import springboottestexample.springboottestexample.entity.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 import springboottestexample.springboottestexample.entity.request.AddUserRequest;
 import springboottestexample.springboottestexample.repository.UserRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import java.util.List;
@@ -30,7 +25,7 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(path = "/adduser", method = RequestMethod.POST)
     public void addUSer(@RequestBody AddUserRequest addUserRequest) {
         User user = new User();
         user.setName(addUserRequest.getName());
